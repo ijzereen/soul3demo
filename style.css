@@ -102,6 +102,12 @@ body::after {
     text-align: center; background: rgba(0, 0, 0, 0.85); padding: 60px 100px;
     border-top: 1px solid rgba(255,0,0,0.4); border-bottom: 1px solid rgba(255,0,0,0.4);
     backdrop-filter: blur(8px); width: 100vw; box-shadow: 0 0 50px rgba(200, 0, 0, 0.2);
+    animation: fadeInSlow 3s ease-out forwards;
+}
+
+@keyframes fadeInSlow {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 #game-over h2 {
