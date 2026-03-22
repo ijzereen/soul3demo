@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souls Web Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+    <div id="ui-layer">
+        <div id="start-screen">
+            <h1>SOULS DEMO</h1>
+            <p>Click to Start</p>
+            <div class="controls-info">
+                <span>WASD</span> Move <br>
+                <span>Mouse</span> Look / Left Click Attack <br>
+                <span>Space</span> Roll (Uses Stamina)
+            </div>
+        </div>
+        <div id="hud" style="display: none;">
+            <div class="bars">
+                <div id="health-bar-container"><div id="health-bar"></div></div>
+                <div id="stamina-bar-container"><div id="stamina-bar"></div></div>
+            </div>
+            <div id="crosshair"></div>
+            <div id="target-dot"></div>
+            <div id="boss-health-container" style="display: none;">
+                <div id="boss-name">CORRUPTED KNIGHT</div>
+                <div id="boss-health-bar"></div>
+            </div>
+            <div id="game-over" style="display: none;">
+                <h2>YOU DIED</h2>
+                <p>Press R to Restart</p>
+            </div>
+            <div id="victory" style="display: none;">
+                <h2>VICTORY ACHIEVED</h2>
+                <p>Press R to Restart</p>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
